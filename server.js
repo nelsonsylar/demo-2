@@ -18,6 +18,31 @@ var server = http.createServer(function(request, response){
   var method = request.method
 
   /******** 从这里开始看，上面不要看 ************/
+  if(path=="/"){
+    console.log('到index页\n')
+    response.setHeader('Content-Type', 'text/html; charset=utf-8')  //是text/html 不是text/index  注意连接用的是分号
+    response.write('<!DOCTYPE>\n<html><head><link rel="stylesheet" href="/style.css"></head>\n<body><h1>hello world!</h1><script src="/main.js"></script></body></html>')
+    response.end()
+  }
+  else if(path=="/style.css"){
+    console.log('找到css\n')
+    response.setHeader('Content-Type', 'text/css; charset=utf-8')
+    response.write('h1{background : green;}')
+    response.end()
+  }
+  else if(path=='/main.js'){
+    console.log('找到js\n')
+    response.setHeader('Content-Type', 'text/javascript; charset=utf-8')
+    response.write('alert("js do this")')
+    response.end()
+  }
+  else {
+    console.log('404')
+    response.statusCode=404
+    response.write('404')
+    response.end()
+  }
+  
 
 
 
@@ -27,13 +52,6 @@ var server = http.createServer(function(request, response){
 
 
 
-
-
-
-
-  console.log('方方说：得到 HTTP 路径\n' + path)
-  console.log('方方说：查询字符串为\n' + query)
-  console.log('方方说：不含查询字符串的路径为\n' + pathNoQuery)
 
 
 
