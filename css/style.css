@@ -3,6 +3,9 @@ body{
     background-color: #EFEFEF;
     color: black;
 }
+ul,ol{
+    list-style: none;
+}
 .icon {
     width: 30px; height: 30px;
     vertical-align: -0.15em;
@@ -85,6 +88,7 @@ main>.profile{
     margin:0 auto;
     max-width: 940px;
     background-color: white;
+    box-shadow: 0px 3px 18px -1px rgba(0,0,0,0.75);
 }
 main>.profile>.profile_frame>.profile_image{
     float:left;
@@ -155,6 +159,7 @@ footer>.media{
     margin:0 auto;
     background-color: #E6686A;
     max-width: 940px;
+    box-shadow: 0px 3px 18px -1px rgba(0,0,0,0.75);
 }
 .media>.mediaIcon{
     text-align: center;
@@ -169,4 +174,174 @@ footer>.media{
 .media>.mediaIcon>a:hover{
     background:rgb(207, 93, 95);
     
+}
+main{
+    margin-top:-320px; 
+}
+section>.download>a{
+    border:1px solid rgb(205, 207, 209);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    padding: 21px 55px;
+    display: inline-block;
+    transition: 200ms;
+    border-radius: 2px;
+   
+}
+section>.download>a:hover{
+    box-shadow: 0px 3px 18px -1px rgba(0,0,0,0.4);
+}
+section>.download{
+    margin-top:30px;
+    text-align: center;
+}
+
+
+section>p{
+    padding-top: 12px;
+    line-height: 1.8;
+    font-size: 18px;
+    text-align: center;
+}
+section>.skill>h2{
+    padding-top: 32px;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+}
+section>.skill>.workswrapper{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+section>.skill>.workswrapper>ul{
+    box-shadow: 0px 3px 18px -1px rgba(0,0,0,0.75);
+    background-color: #fff;
+    padding-bottom: 50px;
+
+}
+.workswrapper>ul>li{
+    float: left;
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 44px;
+    padding-top: 45px;
+    width: 45%;
+
+}
+.workswrapper>ul>li:nth-child(even){
+   float:right;
+   width: 45%;
+}
+.progressBar{
+    height:5px;
+    
+    border-radius: 2px;
+    background-color: rgb(250, 225, 225);
+    margin-top: 5px;
+}
+.progressBar>.progress{
+    background-color: rgb(230, 104, 106);
+    height:5px;
+    border-radius: 2px;
+    width:50%;
+}
+.works>h2{
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    padding-top: 38px;
+}
+.works{
+    text-align: center;
+    margin-bottom: 26px;
+}
+.works>nav>.all{
+    text-align: center;
+    display: inline-block;
+}
+.works>nav>.all>div{
+    display: inline-block;
+    margin-left: 40px;
+    margin-bottom: 6px;
+
+}
+.works>nav>.all>div:hover{
+ cursor: pointer;
+}
+.works>nav>.all>.big{
+    margin-left:0;
+}
+.works>nav>.progressBar2{
+    height:5px;
+    
+    background-color: white;
+    border-radius: 2px;
+    
+}
+
+.works>nav>.progressBar2>.bar.state-1{
+    height:5px;
+    
+    background-color:rgb(230, 104, 106);
+    border-radius: 2px;
+    width:19%;
+    transition:  0.5s;
+    
+}
+.works>nav>.progressBar2>.bar.state-2{
+    height:5px;
+    
+    background-color:rgb(230, 104, 106);
+    border-radius: 2px;
+    width: 36%;
+    margin-left: 59px;
+    transition:  0.5s;
+    
+}
+.works>nav>.progressBar2>.bar.state-3{
+    height:5px;
+    
+    background-color:rgb(230, 104, 106);
+    border-radius: 2px;
+    width: 21%;
+    margin-left: 149px;
+    transition:  0.5s;
+    
+}
+.works>nav{
+    display: inline-block;
+}
+.works>.allworks{
+    
+    max-width: 940px;
+    margin:25px auto;
+    margin-bottom:50px;
+   
+    
+   
+   
+}
+.works>.allworks>.demo1{
+    
+    display: inline-block;
+    float:left;
+}
+.works>.allworks>.demo2{
+    display: inline-block;
+    float:left;
+    margin-left: 40px;
+}
+.works>.allworks>.demo3{
+    display: inline-block;
+    float:left;
+    margin-left: 40px;
+    margin-top: 22px;
 }
