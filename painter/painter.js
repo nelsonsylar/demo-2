@@ -46,9 +46,9 @@
         
             if(isPainting){
                 if(isClear){
-                    cleardraw(X,Y,mybursh)
+                    cleardraw(X,Y)
                 }else{
-                    draw(X,Y)   //加这一行是为了不让绘制的线段看起来有拼接痕迹
+                    draw(X,Y,mybursh)   //加这一行是为了不让绘制的线段看起来有拼接痕迹
                     drawline(lastxy.x,lastxy.y,X,Y,mybursh);
                     lastxy.x=X
                     lastxy.y=Y
