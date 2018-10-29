@@ -26,10 +26,18 @@ a {
     display: block;
     height: 0;
     clear: both;
-    visibility: hidden
+    visibility: hidden;
+}
+[data-x].offset{
+    transform: translateY(200px);
+}
+[data-x]{
+    transform: translateY(0);
+    transition: all 0.5s;
 }
 
-/* .clearfix{*+height:1%;} */
+
+
 
 .top-nav-bar {
     position: fixed;
@@ -99,7 +107,21 @@ a {
     position: relative;
 }
 
-.top-nav-bar-inner>nav>ul>li:hover>a::after {
+.top-nav-bar-inner>nav>ul>li:hover>a::after{
+    background-color: #E06567;
+    content: '';
+    display: block;
+    top: 100%;
+    position: absolute;
+    left: 0;
+    /* 用right的话动画将会从右往左 */
+    width: 100%;
+    height: 3px;
+    animation: liAnim linear 0.2s;
+    /* 注意加时间animation有个时间是指动画时间
+    而transition的时间是指当状态切换时的时间,两者是不同的 */
+}
+.top-nav-bar-inner>nav>ul>.highlight>a::after{
     background-color: #E06567;
     content: '';
     display: block;
@@ -123,7 +145,7 @@ a {
     }
 }
 
-li>.submenu {
+.top-nav-bar-inner>nav>ul>li>.submenu {
     padding:5px 10px;
     display: none;
     overflow: visible;
@@ -148,7 +170,7 @@ li>.submenu {
     }
 }
 
-li.active>.submenu {
+.top-nav-bar-inner>nav>ul>li.active>.submenu {
     display: block;
     position: absolute;
     top: 100%;
@@ -244,11 +266,10 @@ main hr {
     width: 30%;
 }
 
-footer>.media {
+.media {
     margin: 0 auto;
     background-color: #E6686A;
     max-width: 940px;
-    box-shadow: 0px 3px 18px -1px rgba(0, 0, 0, 0.75);
 }
 
 .media>.mediaIcon {
@@ -337,13 +358,21 @@ section>.skill>.workswrapper>ul {
     border-radius: 2px;
     background-color: rgb(250, 225, 225);
     margin-top: 5px;
+    overflow: hidden;
 }
 
-.progressBar>.progress {
+.skill>.workswrapper>ul>li>.progressBar>.progress {
     background-color: rgb(230, 104, 106);
     height: 5px;
     border-radius: 2px;
     width: 50%;
+    transform: translateX(0);
+    transition:all 1s;
+}
+.offset>.workswrapper>ul>li>.progressBar>.progress {
+   transform: translateX(-100%);
+   
+
 }
 
 .works>h2 {

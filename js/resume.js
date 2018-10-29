@@ -1,4 +1,9 @@
+setTimeout(() => { //设置延迟
+    findCloset()
+}, 1000);
+
 window.onscroll = function (e) {
+    findCloset()
     if (window.scrollY > 0) {
         topNavBar.classList.add("web-scroll")
     }
@@ -6,9 +11,9 @@ window.onscroll = function (e) {
         topNavBar.classList.remove("web-scroll")
     }
 }
-var liTags = document.getElementsByClassName('menuTrigger') //先通过class找爹
 
-for (key in liTags) { //遍历爹的儿子
+var liTags = document.getElementsByClassName('menuTrigger') //先通过class找爹
+for (let key in liTags) { //遍历爹的儿子
     liTags[key].onmouseenter = function (e) {
         let li = e.currentTarget  //返回的e是当前事件元素的行为，e.currentTarget是标签
         li.classList.add('active')
@@ -27,23 +32,25 @@ for (key in liTags) { //遍历爹的儿子
     }
 }
 
-
-//找最近section
-// var specialTags=document.querySelectorAll('[data-x]')           //注意格式 ,属性用[]包围
-// console.log(specialTags)
-// var minIndex=0
-// var currentTop=window.scrollY
-// var targetTopy=specialTags[minIndex].offsetTop
-// console.log(targetTopy)                //在浏览器打出0
-// console.log(specialTags[0].offsetTop) //在浏览器打出0
-// console.log(specialTags[1].offsetTop) //在浏览器打出0
-// console.log(specialTags[2].offsetTop) //在浏览器打出0
-
-
-// for(var key in specialTags){
-
-
-
+function findCloset(){//找最近section
+    var specialTags = document.querySelectorAll('[data-x]')           //注意格式 ,属性用[]包围
+    let minIndex=0
+    for(let i in specialTags){
+        if(Math.abs(specialTags[i].offsetTop-window.scrollY)<Math.abs(specialTags[minIndex].offsetTop-window.scrollY)){ //比较差值小的          
+        minIndex=i//并交换
+        }    
+    }   
+    specialTags[minIndex].classList.remove('offset')
+    let id = specialTags[minIndex].id
+    let a = document.querySelector('a[href="#'+id+'"]')//通过href内的属性找a标签，"href=#siteAbout"注意格式
+    let li = a.parentNode   //找到a的爹，li
+    let ul =li.parentNode   //找到li的爹，ul是一个hash
+    let brothersAndMe=ul.children    //通过爹来找兄弟和自己
+    for(let i=0; i<brothersAndMe.length; i++){  //遍历
+        brothersAndMe[i].classList.remove('highlight') //1这种用法是先消除所有的
+      }
+      li.classList.add('highlight')//2再加上选定的
+}
 //使用tween非线性速度跳转到锚点
 var aTags = document.querySelectorAll('div.top-nav-bar-inner>nav>ul>li>a')//通过关系结构找一堆标签
 function animate(time) {  //这个函数是tween要用的
@@ -51,8 +58,7 @@ function animate(time) {  //这个函数是tween要用的
     TWEEN.update(time);
 }
 requestAnimationFrame(animate);
-
-for (var i in aTags) {//遍历找到的一堆标签(也就是hash表)
+for (let i in aTags) {//遍历找到的一堆标签(也就是hash表)
     aTags[i].onclick = function (e) { //这是套路
         e.preventDefault()//去掉点击a的默认方式
         let a = e.currentTarget //找到事件的标签
