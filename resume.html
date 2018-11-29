@@ -6,13 +6,9 @@
     <title>nelson's resume</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/loadingAnimation.css">
-    <!--导入时一定要注意文件路径-->
-
-    </style>
-    <script src="//at.alicdn.com/t/font_861091_4t175ftu303.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <!--导入时一定要注意文件路径--> 
 </head>
-
 <body>
     <div id='siteWelcome' class="load-wrapper active">
         <div class="loadingAnimation"></div>
@@ -117,7 +113,7 @@
                 <div class="workswrapper">
                     <ul class="clearfix">
                         <li>html5&ampcss3<div class="progressBar">
-                                <div class="progress" style="width:80%>
+                                <div class="progress" style="width:80%">
 
                                 </div>
                             </div>
@@ -168,56 +164,48 @@
                 <h2>
                     作品集
                 </h2>
-                <nav>
-                    <div class="all">
-                        <div id="all_big" class="big">
-                            所有
-                        </div>
-                        <div id="all_small1" class="small">
-                            框架
-                        </div>
-                        <div id="all_small2" class="small">
-                            原生
-                        </div>
-
-                    </div>
-                    <div class="progressBar2">
-                        <div id="barstate" class="bar state-1"></div>
-                    </div>
-                    <script>
-                        all_big.onclick = function () {
-                            barstate.className = "bar state-1"
-
-                        }
-                        all_small1.onclick = function () {
-                            barstate.className = "bar state-2"
-
-                        }
-                        all_small2.onclick = function () {
-                            barstate.className = "bar state-3"
-
-                        }
-                    </script>
-
-                </nav>
                 <div class="allworks clearfix">
-                    <div class="demo1"><img src="./img/1.jpg" alt="demo1"></div>
-                    <div class="demo2"><img src="./img/2.jpg" alt="demo2"></div>
-                    <div class="demo3"><img src="./img/3.jpg" alt="demo3"></div>
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div id=myswiperWrapper class="swiper-wrapper">
+                            <!-- Slides -->
+                            <img clickGoto=1 src='./img/myCanvas.jpg' class="swiper-slide">
+                            <img clickGoto=2 src='./img/navHomeweb.png' class="swiper-slide">
+                            <img clickGoto=3 src="./img/slider.png" class="swiper-slide">
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- If we need navigation buttons -->
+                        
+                     <script>
+                         let myswiperWrapper=document.querySelector('#myswiperWrapper').children          
+                         for(let i=0;i<myswiperWrapper.length;i++){
+                             myswiperWrapper[i].onclick=function(e){
+                                 let node=e.currentTarget
+                                 let web=node.getAttribute('clickGoto')
+                                 if(web==1){
+                                    window.open(`https://nelsonsylar.github.io/manyDemo/painter/painter.html`)
+                                 }else if(web==2){
+                                    window.open(`https://nelsonsylar.github.io/manyDemo/myHomeNav/keyBoardNav.html`)
+                                 }else if(web==3){
+                                    window.open(`https://nelsonsylar.github.io/manyDemo/myslide/AppleSlideInfinity.html`)
+                                 }  
+                             }
+                         }
+                     </script>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-
-
             </div>
         </section>
     </div>
-    <script>
-        function loadAnimation() {
-            siteWelcome.classList.remove('active')
-            siteContent.classList.add('active')
-        }
-        setTimeout("loadAnimation()", 1000)//注意setTimeout传入的函数表达式要加引号
-
-    </script>
+    <script src="//at.alicdn.com/t/font_861091_4t175ftu303.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/mySwiper.js"></script>
+    <script src="./js/loadAnimation.js"></script>
     <script type="text/javascript" src="./js/resume.js"></script>
 </body>
 

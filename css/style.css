@@ -7,7 +7,10 @@ body {
 ul, ol {
     list-style: none;
 }
-
+.swiper-container {
+    width: 940px;
+    height: 531px;
+}
 .icon {
     width: 30px;
     height: 30px;
@@ -445,6 +448,7 @@ section>.skill>.workswrapper>ul {
 }
 
 .works>.allworks {
+    position: relative;
     max-width: 940px;
     margin: 25px auto;
     margin-bottom: 50px;
@@ -474,4 +478,15 @@ section>.skill>.workswrapper>ul {
 
 .site-content.active {
     display: block;
+}
+.allworks>.swiper-button-prev,.allworks>.swiper-button-next{
+    border-radius: 50%;
+    background-color:white;
+    height: 64px;
+    width:64px;
+    right:110%;
+}
+.allworks>.swiper-button-next{
+    
+    left:100%;
 }
