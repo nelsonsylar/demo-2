@@ -25,7 +25,7 @@
                 brothersAndMe[i].classList.remove('highlight') //1这种用法是先消除所有的
             }
             li.classList.add('highlight')//2再加上选定的
-            console.log('here')
+            
         },
         initLoadAnimation:function(){
             setTimeout(() => { //设置延迟

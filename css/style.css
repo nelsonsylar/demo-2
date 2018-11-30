@@ -490,4 +490,27 @@ section>.skill>.workswrapper>ul {
 #mysliders .swiper-button-next{
     left:100%;
 }
-.all{}
+section>.leaveMessage{
+    max-width: 780px;
+    margin:10px auto;
+    margin-bottom: 60px;
+}
+.messageList>li{ 
+    border-bottom:  1px solid #ddd;
+    height:36px;
+    line-height: 36px;
+    background:rgb(239,239,239);
+    font-size:20px;  
+}
+.messageList{
+    border-top:  1px solid #ddd;
+    padding-left:0;
+}
+section>.leaveMessage>h2{
+    text-align: center;
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    padding-top: 38px;
+}
