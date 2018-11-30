@@ -80,8 +80,7 @@
                 </div>
                 <div class="media">
                     <div class="mediaIcon">
-
-                        <a href="//github.com">
+                        <a href="https://github.com/nelsonsylar">
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-github"></use>
                             </svg>
@@ -95,8 +94,6 @@
 
                 </div>
             </div>
-
-          
         </main>
         <section>
             <div class="download">
@@ -121,82 +118,55 @@
 
                         <li>javascript<div class="progressBar">
                                 <div class="progress" style="width:70%">
-
                                 </div>
                             </div>
                         </li>
-
                         <li>jquery<div class="progressBar">
                                 <div class="progress" style="width:30%">
 
                                 </div>
                             </div>
                         </li>
-
                         <li>vue.js<div class="progressBar">
                                 <div class="progress" style="width:40%">
-
                                 </div>
                             </div>
                         </li>
-
                         <li>react.js<div class="progressBar">
                                 <div class="progress" style="width:50%">
-
                                 </div>
                             </div>
                         </li>
-
                         <li>node.js<div class="progressBar">
                                 <div class="progress" style="width:60%">
-
                                 </div>
                             </div>
                         </li>
-
                     </ul>
-
                 </div>
-
             </div>
-
             <div data-x id=siteWork class="works offset" >
                 <h2>
                     作品集
                 </h2>
                 <div class="allworks clearfix">
-                    <!-- Slider main container -->
-                    <div class="swiper-container">
-                        <!-- Additional required wrapper -->
-                        <div id=myswiperWrapper class="swiper-wrapper">
-                            <!-- Slides -->
-                            <img clickGoto=1 src='./img/myCanvas.jpg' class="swiper-slide">
-                            <img clickGoto=2 src='./img/navHomeweb.png' class="swiper-slide">
-                            <img clickGoto=3 src="./img/slider.png" class="swiper-slide">
+                    <div id=mysliders>
+                        <!-- Slider main container -->
+                        <div class="swiper-container">
+                            <!-- Additional required wrapper -->
+                            <div id=myswiperWrapper class="swiper-wrapper">
+                                <!-- Slides -->
+                                <img clickGoto=1 src='./img/myCanvas.jpg' class="swiper-slide">
+                                <img clickGoto=2 src='./img/navHomeweb.png' class="swiper-slide">
+                                <img clickGoto=3 src="./img/slider.png" class="swiper-slide">
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>      
                         </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-                        <!-- If we need navigation buttons -->
-                        
-                     <script>
-                         let myswiperWrapper=document.querySelector('#myswiperWrapper').children          
-                         for(let i=0;i<myswiperWrapper.length;i++){
-                             myswiperWrapper[i].onclick=function(e){
-                                 let node=e.currentTarget
-                                 let web=node.getAttribute('clickGoto')
-                                 if(web==1){
-                                    window.open(`https://nelsonsylar.github.io/manyDemo/painter/painter.html`)
-                                 }else if(web==2){
-                                    window.open(`https://nelsonsylar.github.io/manyDemo/myHomeNav/keyBoardNav.html`)
-                                 }else if(web==3){
-                                    window.open(`https://nelsonsylar.github.io/manyDemo/myslide/AppleSlideInfinity.html`)
-                                 }  
-                             }
-                         }
-                     </script>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+
                 </div>
             </div>
         </section>
@@ -204,9 +174,13 @@
     <script src="//at.alicdn.com/t/font_861091_4t175ftu303.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
     <script src="./js/swiper.min.js"></script>
+    <script src="./js/navHoverSubmenu.js"></script>
+    <script src="./js/sliderClick.js"></script>
     <script src="./js/mySwiper.js"></script>
     <script src="./js/loadAnimation.js"></script>
-    <script type="text/javascript" src="./js/resume.js"></script>
+    <script type="text/javascript" src="./js/findClosetAndMove.js"></script>
+    <script src="./js/stickyNavBar.js"></script>
+    <script src='./js/twenSpeedMove.js'></script>
 </body>
 
 </html>

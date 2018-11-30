@@ -479,14 +479,14 @@ section>.skill>.workswrapper>ul {
 .site-content.active {
     display: block;
 }
-.allworks>.swiper-button-prev,.allworks>.swiper-button-next{
+#mysliders .swiper-button-prev,#mysliders .swiper-button-next{
     border-radius: 50%;
     background-color:white;
     height: 64px;
     width:64px;
-    right:110%;
+    right:100%;
+    left:auto;
 }
-.allworks>.swiper-button-next{
-    
+#mysliders .swiper-button-next{
     left:100%;
 }
