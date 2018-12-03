@@ -16,7 +16,7 @@
         prevEl: '.swiper-button-prev',
       }
     },
-    init:function(){
+    init:function(view){
       this.view=view
       this.Swiper=this.initSwiper(this.view,this.swiperOptions)
     },

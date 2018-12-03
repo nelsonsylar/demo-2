@@ -4,7 +4,7 @@
     var controller={
         view:null,
         aTags:null,
-        init:function(){
+        init:function(view){
             this.view=view
             this.aTags=this.view.querySelectorAll('div.top-nav-bar-inner>nav>ul>li>a')
             this.initFrame()

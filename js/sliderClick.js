@@ -2,7 +2,7 @@
    var view=document.querySelector('#myswiperWrapper')
    var controller={
       view:null,
-      init:function(){
+      init:function(view){
          this.view=view
          this.bindEvents()
       },

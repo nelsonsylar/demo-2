@@ -2,7 +2,7 @@
     var view=document.querySelectorAll('[data-x]')//注意格式 ,属性用[]包围
     var controller={
         view:null,
-        init:function(){
+        init:function(view){
             this.view=view
             this.initLoadAnimation()
         },

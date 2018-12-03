@@ -497,14 +497,16 @@ section>.leaveMessage{
 }
 .messageList>li{ 
     border-bottom:  1px solid #ddd;
-    height:36px;
-    line-height: 36px;
+    height:40px;
+    line-height: 40px;
     background:rgb(239,239,239);
     font-size:20px;  
 }
 .messageList{
     border-top:  1px solid #ddd;
     padding-left:0;
+    max-height:400px;
+    overflow:scroll;
 }
 section>.leaveMessage>h2{
     text-align: center;
