@@ -1,5 +1,5 @@
 !function(){
-   var view=document.querySelector('#myswiperWrapper')
+   var view=View('#myswiperWrapper')
    var controller={
       view:null,
       init:function(view){

@@ -1,6 +1,6 @@
 //----------------nav hover submenu------------------------
 !function(){
-    var view=document.getElementsByClassName('menuTrigger')
+    var view=View('#menuTrigger')
     var controller={
         view:null,
         liTags:null,

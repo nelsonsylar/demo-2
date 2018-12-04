@@ -1,5 +1,5 @@
 !function(){
-    var view = document.querySelector('#siteWelcome')
+    var view = View('#siteWelcome')
     var controller={
         view:null,
         init:function(view){
