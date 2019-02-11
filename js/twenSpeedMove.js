@@ -13,8 +13,9 @@
         bindEvents:function(){
             let aTags=this.aTags
             for (let i in aTags) {//遍历找到的一堆标签(也就是hash表)
+                
                 aTags[i].onclick = function (e) { //这是套路
-                    e.preventDefault()//去掉点击a的默认方式
+                if(i<3)   { e.preventDefault()}//去掉点击a的默认方式
                     let a = e.currentTarget //找到事件的标签
                     let href = a.getAttribute('href') //获取a的href属性，注意a.href会得到带协议的href
                     this.tweenMove(href)
