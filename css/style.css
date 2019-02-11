@@ -206,6 +206,8 @@ main>.profile {
 
 main>.profile>.profile_frame>.profile_image {
     float: left;
+    width: 300px;
+    height:400px;
 }
 
 main>.profile>.profile_frame>.idcard {
